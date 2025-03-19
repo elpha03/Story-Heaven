@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Story Haven</title>
+    <link rel="icon" type="image/x-icon" href="comic.png">
+  
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background: #2c3e50;
+            color: white;
+            padding: 1em;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-family: 'Georgia', serif;
+        }
+        nav a {
+            color: white;
+            margin: 0 1em;
+            text-decoration: none;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        #hero {
+            background: linear-gradient(to right, #3498db, #8e44ad);
+            color: white;
+            padding: 2em;
+            text-align: center;
+        }
+        section {
+            padding: 2em;
+        }
+        h2 {
+            font-family: 'Georgia', serif;
+            color: #2c3e50;
+        }
+        .story-card {
+            background: white;
+            padding: 1em;
+            margin: 1em 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .ebook-card {
+            background: white;
+            padding: 1em;
+            margin: 1em 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        button {
+            background: #e74c3c;
+            color: white;
+            border: none;
+            padding: 0.5em 1em;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #c0392b;
+        }
+        .full-story {
+            display: none;
+            margin-top: 1em;
+            padding: 1em;
+            background: #f9f9f9;
+            border-left: 4px solid #3498db;
+        }
+        .download-btn {
+            background: #e74c3c;
+            color: white;
+            padding: 0.5em 1em;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .download-btn:hover {
+            background: #c0392b;
+        }
+        footer {
+            text-align: center;
+            padding: 1em;
+            background: #2c3e50;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Story Haven</h1>
+        <nav>
+            <a href="#stories">Stories</a>
+            <a href="#ebooks">E-books</a>
+            <a href="#about">About</a>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <h2>Welcome to Story Haven</h2>
+        <p>Discover tales of wonder and mystery below.</p>
+    </section>
+
+    <section id="stories">
+        <h2>Stories</h2>
+        <div class="story-card">
+            <h3>The Lost Key</h3>
+            <p><strong>Preview:</strong> In a forgotten village, Mia found a key glowing faintly in the dirt. She didn’t know it unlocked a door no one had seen in centuries...</p>
+            <button onclick="toggleStory('story1')">Read Full Story</button>
+            <div id="story1" class="full-story">
+                <p>Mia brushed the soil off the key, its faint pulse warming her fingers. The village elders had spoken of a hidden vault, sealed since the Great Frost centuries ago. Curiosity gnawed at her, so she set out at dawn, the key clutched tight. She climbed the hill to the ancient oak, its gnarled roots sprawling like veins. Beneath its shadow, she spotted a rusted lock embedded in stone.</p>
+                <p>With a trembling hand, she inserted the key. The ground shuddered, and a slab slid away, revealing spiral steps descending into darkness. Torch in hand, she ventured down. The air grew thick, humming with energy. At the bottom, she found a cavern lined with shelves—endless rows of books, their covers glowing faintly like the key. A voice, soft and ancient, echoed: “You’ve found the Library of Lost Dreams. You are its keeper now.”</p>
+                <p>Mia’s heart raced. She opened a book, and visions of forgotten lives flooded her mind. She knew she’d never return to the village—not when she held the stories of the world below her feet.</p>
+            </div>
+        </div>
+        <div class="story-card">
+            <h3>Starbound Signal</h3>
+            <p><strong>Preview:</strong> A radio crackled to life on Eli’s desk, broadcasting a voice from a starship lost decades ago...</p>
+            <button onclick="toggleStory('story2')">Read Full Story</button>
+            <div id="story2" class="full-story">
+                <p>Eli was tinkering in his attic when the old radio sparked to life. Static cleared, and a voice emerged: “This is Starbound, Day 472. We’re lost beyond the nebula. Supplies low.” His stomach dropped—the voice was his own, though he’d never left Earth. He turned the dial, but the signal held, growing clearer each night.</p>
+                <p>By Day 480, the logs mirrored his life: “Eli ate oatmeal today. He’s restless.” He hadn’t told a soul about the oatmeal. Panic set in. He dug through archives—Starbound vanished 30 years ago, crew presumed dead. Yet here it was, narrating his existence. On Day 499, the voice rasped, “Tomorrow, you’ll join us.”</p>
+                <p>Eli smashed the radio, shards scattering across the floor. Silence fell—then a hum rose from the wreckage. His own voice whispered, “You can’t escape the signal.” The attic dimmed, stars blinked through the ceiling, and Eli felt weightless, pulled toward an unseen ship.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="ebooks">
+        <h2>E-books</h2>
+        <div class="ebook-card">
+            <h3>Whispers of the Void</h3>
+            <p>A collection of cosmic mysteries. 50 pages of wonder.</p>
+            <a href="#" class="download-btn">Download (PDF Coming Soon)</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About</h2>
+        <p>I’m a storyteller weaving worlds for curious minds. Join me on this journey.</p>
+    </section>
+
+    <footer>
+        <p>© 2025 Story Haven</p>
+    </footer>
+
+    <script>
+        function toggleStory(storyId) {
+            const story = document.getElementById(storyId);
+            if (story.style.display === "block") {
+                story.style.display = "none";
+            } else {
+                story.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>
